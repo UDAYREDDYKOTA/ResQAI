@@ -1,0 +1,39 @@
+/* ResQAI Layout & Component Styles */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--bg-app);
+}
+
+.workspace-layout {
+  display: flex;
+  flex: 1;
+  min-height: calc(100vh - 48px);
+  overflow: hidden;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  position: relative;
+  background-color: var(--bg-app);
+}
+
+.grid-cols-eoc {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 390px;
+  gap: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+@media (max-width: 1200px) {
+  .grid-cols-eoc {
+    grid-template-columns: 1fr;
+    overflow-y: auto;
+  }
+}
